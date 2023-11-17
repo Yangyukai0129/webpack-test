@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './CSS/06-communication.css'
 
 export default class App extends Component {
     constructor() {
         super()
         this.state = {
-            filmList: []
+            filmList: [],
+            info: []
         }
         axios.get("/test.json").then(
             response => {
@@ -20,9 +22,21 @@ export default class App extends Component {
 
     render() {
         return (
-            <div>{this.state.filmList.map(item =>
-                <FilmItem key={item.id}></FilmItem>)}</div>
+            < div >
+                {/* {this.state.info} */}
+                {
+                    this.state.filmList.map(item =>
+                        <FilmItem key={item.id} name={item.title} {...item}
+                            onEvent={(value) => {
+                                console.log("父組件接收", value)
+                                this.setState({
+                                    info: value
+                                })
+                            }}></FilmItem>)
+                }
 
+                < Filmdetail info={this.state.info}></Filmdetail >
+            </div >
         )
     }
 
@@ -30,9 +44,24 @@ export default class App extends Component {
 
 class FilmItem extends Component {
     render() {
+        // console.log(this.props)
+        let { id, title } = this.props
         return (
-            <div>
-                filmitem
+            <div className='Filmitem'
+                onClick={() => { this.props.onEvent(title) }}>
+                {/* {this.props.title} */}
+                <h4>{id}</h4>
+                <h4>{title}</h4>
+            </div>
+        )
+    }
+}
+
+class Filmdetail extends Component {
+    render() {
+        return (
+            <div className="Filmdetail">
+                {this.props.info}
             </div>
         )
     }
