@@ -9,9 +9,10 @@ export default class App extends Component {
         }
         axios.get("/test.json").then(
             response => {
-                console.log(response.data)
+                console.log(response.data.films)
+
                 this.setState({
-                    filmList: response.data
+                    filmList: response.data.films
                 })
             }
         ).catch(error => console.log(error))
@@ -20,7 +21,8 @@ export default class App extends Component {
     render() {
         return (
             <div>{this.state.filmList.map(item =>
-                <FilmItem></FilmItem>)}</div>
+                <FilmItem key={item.id}></FilmItem>)}</div>
+
         )
     }
 
