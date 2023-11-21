@@ -5,7 +5,7 @@ export default class App extends Component {
         myname: "kevin"
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         console.log("第一次will mount", this.state.myname, document.getElementById("myname"))
 
         // 第一次完成DOM前的最後一次修改狀態
@@ -14,6 +14,7 @@ export default class App extends Component {
         })
 
         // 可以用來初始化數據
+        // 不安全，應該要改用componentDidMount或constructor，加上UNSAFE_可以讓錯誤訊息停止但還是不推薦WillMount
     }
 
     componentDidMount() {
