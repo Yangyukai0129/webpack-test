@@ -19,7 +19,7 @@ export default class App extends Component {
         )
     }
 
-    // scu
+    // scu 性能優化函數
     shouldComponentUpdate(nextProps, nextState) {
         // return true 應該更新
         // return false 阻止更新
