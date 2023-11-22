@@ -13,7 +13,7 @@ var bus = {
 
     // 發布
     publish(text) {
-        // 遍歷所有的list，將回掉函數執行
+        // 遍歷所有的list，將回調函數執行
         this.list.forEach(callback =>
             // 先檢查callback是否存在，如果是的話再執行回調函數(callback())避免出現錯誤
             callback && callback(text))
