@@ -16,8 +16,8 @@ export default class App extends Component {
                     list: res.data.films
                 })
 
-            }
 
+            }
         )
 
     }
@@ -60,9 +60,9 @@ export default class App extends Component {
 
         // console.log(preState.list)
 
-        // 確保了這個操作只在 list 由空到非空的變化時執，行避免重複做Betterscroll
-        // if (preState.list.length === 0) {
-        //     new Betterscroll("#wrapper")
-        // }
+        // 確保了這個操作只在 list 由空到非空的變化時執行，避免重複做Betterscroll
+        if (preState.list.length === 0) {
+            new Betterscroll("#wrapper")
+        }
     }
 }
