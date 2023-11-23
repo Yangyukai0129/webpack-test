@@ -4,7 +4,7 @@ import axios from 'axios'
 export default class App extends Component {
 
     state = {
-        type: 1
+        type: 0
     }
 
     render() {
