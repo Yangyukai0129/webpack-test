@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 
 // createRoot(document.getElementById('root')).render(<div>234</div>);
 
-import App from './02-advanced/18-生命週期-銷毀'
+import App from './02-advanced/22-swiper-異步'
 
 createRoot(document.getElementById('root')).render(<App></App>)
 
