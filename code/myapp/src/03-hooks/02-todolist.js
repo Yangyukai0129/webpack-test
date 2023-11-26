@@ -28,7 +28,7 @@ export default function App() {
             <button onClick={handleAdd}>add</button>
             <ul>
                 {list.map((item, index) => <li key={item}>{item}
-                    <button onClick={() => handleDel(index)}>del</button>
+                    <button onClick={handleDel.bind(this, index)}>del</button>
                 </li>)}
             </ul>
             {!list.length && "暫無代辦事項"}
