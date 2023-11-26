@@ -24,7 +24,7 @@ export default class App extends Component {
                         )}
                     </div>
                     {/* <!-- If we need pagination --> */}
-                    <div class="swiper-pagination"></div>
+                    <div className="swiper-pagination"></div>
                 </div>
             </div>
         )

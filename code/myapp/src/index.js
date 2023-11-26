@@ -4,8 +4,14 @@ import { createRoot } from 'react-dom/client'
 
 // createRoot(document.getElementById('root')).render(<div>234</div>);
 
-import App from './02-advanced/22-swiper-異步'
+import App from './02-advanced/23-swiper-組件'
 
 createRoot(document.getElementById('root')).render(<App></App>)
 
+// react18里面已经弃用了ReactDOM.render,不过浏览器依旧能正常运行ReactDOM.render，react18里用下面方法构建dom。
+// import {createRoot} from "react-dom/client";
+
+// const container=document.getElementById("root")
+// const root=createRoot(container)
+// root.render(<Element></Element>)
 // jsx == js + xml
