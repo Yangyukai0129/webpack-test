@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 
 // createRoot(document.getElementById('root')).render(<div>234</div>);
 
-import App from './03-hooks/02-todolist'
+import App from './03-hooks/06-useEffect3'
 
 createRoot(document.getElementById('root')).render(<App></App>)
 
