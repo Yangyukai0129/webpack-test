@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 
 // createRoot(document.getElementById('root')).render(<div>234</div>);
 
-import App from './03-hooks/06-useEffect3'
+import App from './03-hooks/07-useCallback1(major)'
 
 createRoot(document.getElementById('root')).render(<App></App>)
 

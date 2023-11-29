@@ -12,7 +12,7 @@ export default function App() {
 
     const handleAdd = () => {
         setList([...list, text])
-        // 新增完後清空欄位
+        // 新增完後透過value值讓input標籤變成受控以清空欄位
         setText("")
     }
 
