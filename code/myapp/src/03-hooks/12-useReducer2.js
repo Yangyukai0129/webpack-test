@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer } from 'react'
 
 const reducer = (prevState, action) => {
 
@@ -14,6 +14,7 @@ export default function App() {
     const [state, dispatch] = useReducer(reducer, initialState)
     return (
         <GlobalContext.Provider value={{
+            // state:state的簡寫
             state,
             dispatch
         }}>
@@ -27,6 +28,7 @@ export default function App() {
 }
 
 function Child1() {
+    const { dispatch } = useContext(GlobalContext)
     return (
         <div style={{ background: "red" }}>
             <button onClick={() => {
@@ -40,14 +42,16 @@ function Child1() {
 }
 
 function Child2() {
+    const { state } = useContext(GlobalContext)
     return (
-        <div style={{ background: "red" }}>
+        <div style={{ background: "yellow" }}>
             Child2
         </div>
     )
 }
 
 function Child3() {
+    const { state } = useContext(GlobalContext)
     return (
         <div style={{ background: "gray" }}>
             Child3
