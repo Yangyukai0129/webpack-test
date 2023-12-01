@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 
 // createRoot(document.getElementById('root')).render(<div>234</div>);
 
-import App from './02-advanced/09-context'
+import App from './03-hooks/12-useReducer2'
 
 createRoot(document.getElementById('root')).render(<App></App>)
 

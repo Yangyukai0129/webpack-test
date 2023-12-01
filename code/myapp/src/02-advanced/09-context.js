@@ -26,6 +26,7 @@ export default class App extends Component {
     render() {
         return (
             <GlobalContext.Provider value={{
+                // call跟sms是測試的可以不用管
                 call: "打電話",
                 sms: "簡訊",
                 info: this.state.info,
