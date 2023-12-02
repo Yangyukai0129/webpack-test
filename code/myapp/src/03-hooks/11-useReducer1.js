@@ -3,6 +3,7 @@ import React, { useReducer } from 'react'
 const reducer = (prevState, action) => {
     console.log("reducer", prevState, action)
 
+    // 因為不能直接進行修改state所以新增一個值來進行更新，為了方便追蹤先前狀態所以寫成{...prevState}
     let newState = { ...prevState }
 
     switch (action.type) {
