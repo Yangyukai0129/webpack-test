@@ -14,7 +14,7 @@ export default class App extends Component {
         }
         axios.get("/test.json").then(
             response => {
-                console.log(response.data.films)
+                // console.log(response.data.films)
 
                 this.setState({
                     filmList: response.data.films
