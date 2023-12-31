@@ -60,7 +60,7 @@ export default function App() {
     )
 }
 
-function FilmItem(props) {
+function FilmItem() {
     let { id, title } = props
     const { dispatch } = useContext(GlobalContext)
     return (
